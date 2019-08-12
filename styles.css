@@ -1,0 +1,822 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  overflow-x: hidden;
+}
+
+header {
+  background-color: #252525;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 70%;
+}
+
+header a {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bolder;
+  text-decoration: none;
+  color: white;
+  padding: 3em;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+header a:hover {
+  color: #ffd619;
+}
+
+header li {
+  list-style: none;
+  border-right: 1px solid #ffd619;
+  margin: 2em auto;
+}
+
+header li:nth-child(1) {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+header li:nth-child(5), header li:nth-child(1) {
+  border: none;
+}
+
+header .logo {
+  display: block;
+  background-color: #ffd619;
+  -webkit-box-shadow: 10px 10px 20px #111;
+          box-shadow: 10px 10px 20px #111;
+  width: 200px;
+  height: 220px;
+  background-image: url(assets/logo.png);
+  background-repeat: no-repeat;
+  background-size: 150px 110px;
+  background-position: 25px 70px;
+  position: absolute;
+  z-index: 10;
+  top: -200px;
+  left: 0;
+}
+
+.banner {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(assets/banner.png);
+  background-repeat: no-repeat;
+  background-size: 105vw 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.banner .banner-info {
+  margin-left: 11em;
+  margin-top: 10em;
+  margin-bottom: 10em;
+  width: 30%;
+  color: white;
+  text-shadow: 2px 2px 2px #252525;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: center;
+}
+
+.banner .banner-info p:nth-child(1) {
+  font-size: 2.55em;
+  font-weight: bolder;
+  position: relative;
+  top: .5em;
+}
+
+.banner .banner-info p:nth-child(2) {
+  font-size: 3.3em;
+  font-weight: bolder;
+  color: #ffd619;
+}
+
+.banner .banner-info button {
+  background-color: #ffd619;
+  border: none;
+  color: #252525;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: .5em 1.5em;
+  margin: 1.5em;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-box-shadow: 1px 1px 10px #252525;
+          box-shadow: 1px 1px 10px #252525;
+}
+
+.sistema-gym {
+  width: 100%;
+  height: 100%;
+  background-color: #ffd619;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.sistema-gym .mancuerna {
+  width: 300px;
+  height: 400px;
+  background-image: url(assets/mancuerna.png);
+  background-size: 300px 400px;
+  background-repeat: no-repeat;
+  margin: 5em .5em;
+}
+
+.sistema-gym .banner-info {
+  margin-left: 10em;
+  width: 30%;
+  color: white;
+  text-shadow: 2px 2px 10px #252525;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: center;
+}
+
+.sistema-gym .banner-info p:nth-child(1) {
+  font-size: 2.55em;
+  font-weight: bolder;
+  position: relative;
+  top: .2em;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
+  opacity: 0;
+}
+
+.sistema-gym .banner-info p:nth-child(2) {
+  font-size: 3.4em;
+  font-weight: bolder;
+  color: #252525;
+  font-family: 'Coda';
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -webkit-transform: translateX(50px);
+          transform: translateX(50px);
+  opacity: 0;
+}
+
+.sistema-gym .banner-info p:nth-child(3) {
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+}
+
+.sistema-gym .banner-info button {
+  background-color: #252525;
+  border: none;
+  color: white;
+  font-size: 1.2em;
+  padding: .5em 1.5em;
+  margin: 1.5em;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-box-shadow: 1px 1px 10px #252525;
+          box-shadow: 1px 1px 10px #252525;
+}
+
+.conoce {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.conoce .chica {
+  width: 400px;
+  height: 500px;
+  background-size: 400px 500px;
+  background-repeat: no-repeat;
+  background-image: url(assets/fitness-girl-dot.png);
+  margin: 5em 1em;
+}
+
+.conoce .banner-info {
+  width: 30%;
+  color: white;
+  text-shadow: 2px 2px 10px #252525;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: center;
+}
+
+.conoce .banner-info p {
+  text-shadow: none;
+  color: #252525;
+}
+
+.conoce .banner-info p:nth-child(1) {
+  font-size: 2.25em;
+  font-weight: bolder;
+  position: relative;
+  top: .2em;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -webkit-transform: translateX(50px);
+          transform: translateX(50px);
+  opacity: 0;
+}
+
+.conoce .banner-info p:nth-child(2) {
+  font-size: 1.55em;
+  font-weight: bolder;
+  color: #252525;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
+  opacity: 0;
+}
+
+.conoce .banner-info p:nth-child(3) {
+  color: #252525;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+}
+
+.conoce .banner-info button {
+  background-color: #ffd619;
+  border: none;
+  color: #252525;
+  font-size: 1.2em;
+  padding: .5em 1.5em;
+  margin: 1.5em;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-box-shadow: 1px 1px 20px #ffd619;
+          box-shadow: 1px 1px 20px #ffd619;
+}
+
+.slides {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.slides .slider {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.slides h2 {
+  color: white;
+  background-color: #252525;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 2em;
+  padding: .5em 2.5em;
+  position: relative;
+  top: 4px;
+}
+
+.slides img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: relative;
+  top: 4px;
+}
+
+.slides .dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  bottom: 1em;
+  z-index: 10;
+}
+
+.slides .dot-1, .slides .dot-2, .slides .dot-3 {
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  cursor: pointer;
+  margin: 1em;
+}
+
+.slides .dot-1 {
+  background-image: url(assets/circular2.svg);
+}
+
+.slides .dot-2, .slides .dot-3 {
+  background-image: url(assets/circular.svg);
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  background-color: #252525;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+footer .content-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin: 2em;
+}
+
+footer .content-footer .info {
+  margin: 1.5em;
+  color: white;
+}
+
+footer .content-footer .logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1.5em;
+}
+
+footer .content-footer .logos .logo-fb, footer .content-footer .logos .logo-in, footer .content-footer .logos .logo-tw {
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  cursor: pointer;
+  padding: 2em;
+}
+
+footer .content-footer .logos .logo-fb {
+  background-image: url(assets/facebook.png);
+}
+
+footer .content-footer .logos .logo-in {
+  background-image: url(assets/instagram.png);
+}
+
+footer .content-footer .logos .logo-tw {
+  background-image: url(assets/twitter.png);
+}
+
+footer h3 {
+  margin: 1.5em;
+}
+
+footer h3 a {
+  text-decoration: none;
+  color: #ffd619;
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+@media (min-width: 1281px) {
+  .banner {
+    background-size: cover;
+  }
+}
+
+/* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  header a {
+    padding: 2em;
+  }
+  header .logo {
+    position: absolute;
+    left: -50px;
+  }
+  .banner .banner-info {
+    margin-left: 5em;
+    position: relative;
+    top: 3em;
+  }
+  .sistema-gym .banner-info p:nth-child(1) {
+    font-size: 1.8em;
+    font-weight: bolder;
+    position: relative;
+    top: .2em;
+  }
+  .sistema-gym .banner-info p:nth-child(2) {
+    font-size: 2.4em;
+    font-weight: bolder;
+    color: #252525;
+    font-family: 'Coda';
+  }
+}
+
+/* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+@media (min-width: 768px) and (max-width: 1024px) {
+  header a {
+    padding: .5em;
+  }
+  header .logo {
+    position: absolute;
+    left: -50px;
+  }
+  .banner {
+    width: 100vw;
+    height: 65vh;
+    background-size: 100vw 100%;
+  }
+  .banner .banner-info {
+    margin-left: 3em;
+    position: relative;
+    top: 3em;
+  }
+  .banner .banner-info p:nth-child(1) {
+    font-size: 2em;
+    font-weight: bolder;
+    position: relative;
+    top: .5em;
+  }
+  .banner .banner-info p:nth-child(2) {
+    font-size: 2.6em;
+    font-weight: bolder;
+    color: #ffd619;
+  }
+  .sistema-gym .mancuerna {
+    width: 200px;
+    height: 250px;
+    background-size: 200px 250px;
+  }
+  .sistema-gym .banner-info {
+    margin: 4em 2em;
+  }
+  .sistema-gym .banner-info p:nth-child(1) {
+    font-size: 1.4em;
+    font-weight: bolder;
+    position: relative;
+    top: .2em;
+  }
+  .sistema-gym .banner-info p:nth-child(2) {
+    font-size: 1.8em;
+    font-weight: bolder;
+    color: #252525;
+    font-family: 'Coda';
+  }
+  .conoce .chica {
+    width: 250px;
+    height: 300px;
+    background-size: 250px 300px;
+    margin: 5em 2em;
+  }
+  .conoce .banner-info p:nth-child(1) {
+    font-size: 1.4em;
+  }
+  .conoce .banner-info p:nth-child(2) {
+    font-size: 1em;
+  }
+  .conoce .banner-info p:nth-child(3) {
+    font-size: 1em;
+  }
+}
+
+/* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  header a {
+    padding: 1em;
+  }
+  header .logo {
+    position: absolute;
+    left: -50px;
+  }
+  .banner .banner-info {
+    margin-left: 3.5em;
+    position: relative;
+    top: 3em;
+  }
+  .banner .banner-info p:nth-child(1) {
+    font-size: 2em;
+    font-weight: bolder;
+    position: relative;
+    top: .5em;
+  }
+  .banner .banner-info p:nth-child(2) {
+    font-size: 2.6em;
+    font-weight: bolder;
+    color: #ffd619;
+  }
+  .sistema-gym .banner-info p:nth-child(1) {
+    font-size: 1.35em;
+    font-weight: bolder;
+    position: relative;
+    top: .2em;
+  }
+  .sistema-gym .banner-info p:nth-child(2) {
+    font-size: 1.8em;
+    font-weight: bolder;
+    color: #252525;
+    font-family: 'Coda';
+  }
+}
+
+/* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+@media (min-width: 481px) and (max-width: 767px) {
+  header a {
+    padding: .4em;
+  }
+  header .logo {
+    position: absolute;
+    left: -70px;
+  }
+  .banner {
+    background-size: 120% 100%;
+  }
+  .banner .banner-info {
+    margin-left: 1.8em;
+    position: relative;
+    top: 3em;
+  }
+  .banner .banner-info p:nth-child(1) {
+    font-size: 1.5em;
+    font-weight: bolder;
+    position: relative;
+    top: .5em;
+  }
+  .banner .banner-info p:nth-child(2) {
+    font-size: 2em;
+    font-weight: bolder;
+    color: #ffd619;
+  }
+  .banner .banner-info p:nth-child(3) {
+    text-shadow: 1px 1px 1px #252525;
+    font-size: .8em;
+  }
+  .sistema-gym .mancuerna {
+    width: 150px;
+    height: 200px;
+    background-image: url(assets/mancuerna.png);
+    background-size: 150px 200px;
+    background-repeat: no-repeat;
+    margin: 5em .5em;
+  }
+  .sistema-gym .banner-info p:nth-child(1) {
+    font-size: 1.2em;
+    font-weight: bolder;
+    position: relative;
+    top: .2em;
+  }
+  .sistema-gym .banner-info p:nth-child(2) {
+    font-size: 1.6em;
+    font-weight: bolder;
+    color: #252525;
+    font-family: 'Coda';
+  }
+  .sistema-gym .banner-info p:nth-child(3) {
+    font-size: .9em;
+  }
+  .sistema-gym .banner-info button {
+    font-size: 1em;
+  }
+  .conoce .chica {
+    width: 250px;
+    height: 300px;
+    background-size: 250px 300px;
+    margin: 5em 2em;
+  }
+  .conoce .banner-info p {
+    text-shadow: none;
+    color: #252525;
+  }
+  .conoce .banner-info p:nth-child(1) {
+    font-size: 1.5em;
+    font-weight: bolder;
+    position: relative;
+    top: .2em;
+  }
+  .conoce .banner-info p:nth-child(2) {
+    font-size: 1em;
+    font-weight: bolder;
+  }
+  .conoce .banner-info p:nth-child(3) {
+    font-size: .8em;
+  }
+  .conoce .banner-info button {
+    font-size: 1em;
+  }
+}
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+@media (min-width: 320px) and (max-width: 480px) {
+  header {
+    height: 70vh;
+  }
+  header ul {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    top: 0;
+  }
+  header ul li {
+    margin: 0;
+  }
+  header ul li a {
+    padding: .5em;
+  }
+  header ul li:nth-child(2), header ul li:nth-child(3), header ul li:nth-child(4), header ul li:nth-child(5) {
+    border-right: none;
+    padding: 1em;
+    border-bottom: 1px solid #ffd619;
+    width: 50%;
+    text-align: center;
+  }
+  header .logo {
+    position: relative;
+    margin: 0 auto;
+  }
+  .banner {
+    width: 100vw;
+    height: 30vh;
+    background-size: 100vw 100%;
+  }
+  .banner .banner-info {
+    margin-left: 5em;
+  }
+  .banner .banner-info p:nth-child(3) {
+    display: none;
+  }
+  .banner .banner-info p:nth-child(1) {
+    font-size: 1em;
+  }
+  .banner .banner-info p:nth-child(2) {
+    font-size: 1.3em;
+  }
+  .banner .banner-info button {
+    margin: .3em;
+    padding: 1em;
+    font-size: .8em;
+  }
+  .sistema-gym {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .sistema-gym .mancuerna {
+    width: 150px;
+    height: 200px;
+    background-size: 150px 200px;
+    margin-bottom: 1em;
+  }
+  .sistema-gym .banner-info {
+    margin: 0;
+    width: 70%;
+  }
+  .sistema-gym .banner-info p {
+    font-size: 1em;
+    text-align: center;
+  }
+  .sistema-gym .banner-info p:nth-child(1) {
+    font-size: 1.5em;
+  }
+  .sistema-gym .banner-info p:nth-child(2) {
+    font-size: 2em;
+  }
+  .sistema-gym .banner-info p:nth-child(3) {
+    font-size: 1em;
+  }
+  .conoce {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .conoce .banner-info {
+    width: 70%;
+    margin-top: 2em;
+  }
+  .conoce .chica {
+    width: 200px;
+    height: 250px;
+    background-size: 200px 250px;
+  }
+  .slides {
+    display: none;
+  }
+  footer h3 {
+    text-align: center;
+  }
+  footer .content-footer .info {
+    display: none;
+  }
+  footer .content-footer .logos {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer .content-footer .logos .logo-fb, footer .content-footer .logos .logo-in, footer .content-footer .logos .logo-tw {
+    padding: 0;
+    margin: 1em;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
